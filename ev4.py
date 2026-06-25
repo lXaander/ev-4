@@ -35,7 +35,7 @@ def estado_tareas(tareas):
         
         tarea['completada'] = False
 
-def mostrartareas(tarea):
+def mostrartareas(tareas):
      
     print("Descripcion de la tarea: ",tarea['descripcion']) 
     print("Prioridad: ",tarea['prioridad'])
@@ -88,6 +88,7 @@ def Registrar_tarea(tareas):
         else:
             print("La descripcion ingresada no puede estar vacia ni contener solo espacios")
             return False
+    
 
 
 
@@ -109,7 +110,7 @@ while MostrarMenu == True:
         for tarea in tareas:
             if tarea ['descripcion'] == descripcion:
                 encontrado = True
-                print(tarea['descripcion'])
+                mostrartareas(tareas)
         if encontrado == False:
             print("la tarea no se pudo encontrar")
 
